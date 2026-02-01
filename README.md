@@ -1,3 +1,5 @@
+![Workflow thumbnail](assets/thumbnail.webp)
+
 ![Workflow thumbnail](assets/thumbnail.svg)
 
 ![n8n](https://img.shields.io/badge/n8n-workflow-0EA5E9)
@@ -18,7 +20,6 @@ Automate Entra ID secret/cert expiry monitoringscan all apps, filter by N days, 
 
 ## Included Files
 - `workflow.json`
-- `metadata.json`
 
 ## Setup
 1. Import `workflow.json` into n8n.
@@ -44,6 +45,11 @@ Automate Entra ID secret/cert expiry monitoringscan all apps, filter by N days, 
 ## Author
 
 Murtaza Baig
+
+## Screenshots
+
+![Screenshot](assets/n8nworfklows.webp)
+![Screenshot](assets/thumbnail.webp)
 
 ## License
 MIT License. See `LICENSE`.
