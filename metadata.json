@@ -1,0 +1,43 @@
+{
+  "id": 12399,
+  "title": "Email reports on expiring Microsoft Entra ID app secrets and certificates with Microsoft Graph",
+  "slug": "email-reports-on-expiring-microsoft-entra-id-app-secrets-and-certificates-with-microsoft-graph-12399",
+  "description": "MONITOR EXPIRING ENTRAID APPLICATION SECRETS AND NOTIFY RESPONSIBLEStay ahead of credential expirations by automatically detecting Entra IDapplication client secrets and certificates that are about to expire, andsending a neatly formatted email report.WHAT THIS WORKFLOW SOLVESExpired client secrets and certificates are a common cause of unexpected outagesand failed integrations. Manually checking expiration dates across many Entra IDapplications is tedious and easy to miss. This workflow automates the discoveryand reporting of credentials that will expire within a configurable time window.KEY FEATURES * Fetches all Microsoft Entra ID applications along with: * Client secrets (passwordCredentials) * Certificates (keyCredentials) * Splits credentials into individual entries for easier processing * Filters credentials expiring within the next N days (configurable) * Normalizes results into a consistent structure including: * Application name * App ID * Credential type (Client Secret / Certificate) * Credential name + ID * Days remaining until expiration * Generates an HTML table report, sorted by application name * Sends an email only when expiring items are found (otherwise does nothing)HOW IT WORKS 1. Fetches all Entra ID applications and their credential metadata via Microsoft Graph 2. Separates client secrets and certificates into individual entries 3. Filters entries that expire within the configured time window 4. Builds a normalized list of expiring items with days remaining 5. Emails an HTML table report (only if results exist)SETUP REQUIREMENTS * Microsoft Entra ID app registration with Microsoft Graph Application permissions: * Application.Read.All * In n8n: * Create Microsoft Graph OAuth2 credentials (Client Credentials flow recommended) * Assign those credentials to the Get EntraID Applications and Secrets HTTP Request node * Update the Set Variables node: * notificationEmail: where to send the report * daysBeforeExpiry: alert window in days (e.g., 14)NOTES * The email table highlights soon-to-expire credentials more prominently (based on remaining days). * For automation, replace the manual trigger with a Schedule Trigger (e.g., daily/weekly). * The workflow accesses metadata only (names/IDs/expiry), not secret values.",
+  "metadescription": "Automate Entra ID secret/cert expiry monitoring—scan all apps, filter by N days, and email a formatted HTML report to prevent outages.",
+  "summary": "Automatically scan all Microsoft Entra ID apps to spot client secrets and certificates nearing expiry—before outages hit  \nPulls credential metadata via Microsoft Graph, then splits secrets/certs into easy-to-process individual entries  \nFilters anything expiring within a configurable N‑day window and normalizes results (app name, app ID, type, credential name/ID, days left)  \nGenerates a sorted, styled HTML table that highlights the most urgent expirations  \nSends an email report only when expiring credentials are found (otherwise stays silent)",
+  "date": "2 Jan 2026",
+  "createdAtRaw": "2026-01-02T14:17:39.276+00:00",
+  "categories": [
+    "DevOps"
+  ],
+  "nodeTypes": [
+    "n8n-nodes-base.if",
+    "n8n-nodes-base.set",
+    "n8n-nodes-base.html",
+    "n8n-nodes-base.noOp",
+    "n8n-nodes-base.merge",
+    "n8n-nodes-base.filter",
+    "n8n-nodes-base.splitOut",
+    "n8n-nodes-base.aggregate",
+    "n8n-nodes-base.emailSend",
+    "n8n-nodes-base.stickyNote",
+    "n8n-nodes-base.httpRequest",
+    "n8n-nodes-base.manualTrigger"
+  ],
+  "author": {
+    "name": "Alexander Schnabl",
+    "username": "alexschnabl",
+    "avatar": "https://gravatar.com/avatar/9f3181bb93cda334ba395a3e06f63bb594f4020e6a7f4577c92b86e8ae560069?r=pg&d=retro&size=200",
+    "verified": true
+  },
+  "popularity": 33,
+  "visitors": 33,
+  "inserters": 13,
+  "templateUrl": "https://n8n.io/workflows/12399",
+  "readme": "",
+  "thumbnail": "https://supabase.amastuces.com/storage/v1/object/public/worklowscreenshot/12399-email-reports-on-expiring-microsoft-entra-id-app-secrets-and-certificates-with-microsoft-graph.webp",
+  "complexityLevel": "advanced",
+  "templateData": null,
+  "price": 0,
+  "referalUrl": null
+}
