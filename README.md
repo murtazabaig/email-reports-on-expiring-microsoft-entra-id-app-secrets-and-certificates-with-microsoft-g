@@ -1,6 +1,4 @@
-![Workflow thumbnail](assets/thumbnail.webp)
 
-![Workflow thumbnail](assets/thumbnail.svg)
 
 ![n8n](https://img.shields.io/badge/n8n-workflow-0EA5E9)
 ![license](https://img.shields.io/badge/license-MIT-green)
@@ -45,11 +43,6 @@ Automate Entra ID secret/cert expiry monitoringscan all apps, filter by N days, 
 ## Author
 
 Murtaza Baig
-
-## Screenshots
-
-![Screenshot](assets/n8nworfklows.webp)
-![Screenshot](assets/thumbnail.webp)
 
 ## License
 MIT License. See `LICENSE`.
